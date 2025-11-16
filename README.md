@@ -18,3 +18,11 @@ NestJS uses DI Container to automatically create objects for us.
 after main.ts when we come to app.module.ts
 here NestJS sees providers & create objects
 here NestJS sees controllers & create controller objects
+
+Cron -> EmailService -> EmailFactory -> EmailProvider -> Send Email
+
+Email
+ ├── to: string
+ ├── subject: string
+ ├── body: string
+ └── send() maybe defined by provider
