@@ -1,6 +1,7 @@
 npm run start:dev
 nest g module scheduler
 nest g service scheduler
+pnpm lint --fix
 
 main.ts loads first
 In main.ts 

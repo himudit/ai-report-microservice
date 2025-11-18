@@ -1,13 +1,13 @@
-import { Body, Controller, Post } from '@nestjs/common';
-import { AiService } from './ai.service';
+import { Body, Controller, Post } from "@nestjs/common";
+import { AiService } from "./ai.service";
 
-@Controller('ai')
+@Controller("ai")
 export class AiController {
-    constructor(private readonly aiService: AiService) { }
+  constructor(private readonly aiService: AiService) {}
 
-    @Post()
-    getAIresponse(dto: AIDto) {
-        const request = new AIRequest(dto.prompt);
-        return this.aiService.generateAIresponse(request);
-    }
+  @Post()
+  getAIresponse(dto: AIDto) {
+    const request = new AIRequest(dto.prompt);
+    return this.aiService.generateAIresponse(request);
+  }
 }
