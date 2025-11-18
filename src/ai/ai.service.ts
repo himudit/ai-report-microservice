@@ -7,6 +7,8 @@ export class AiService {
   constructor(private readonly aiFactory: AIFactory) {}
 
   async generateAIResponse(request: AIRequest) {
-    const provider = await this.aiFactory.getProvider("openai");
+    const provider = this.aiFactory.getProvider("gemini");
+
+    return provider.generateResponse(request.getPrompt());
   }
 }
