@@ -8,7 +8,7 @@ import { OpenAIProvider } from "../providers/openai.provider";
 export class AIFactory {
   constructor(
     private readonly geminiProvider: GeminiProvider,
-    // private readonly openAIProvider: OpenAIProvider,
+    private readonly openAIProvider: OpenAIProvider,
     // add new providers here in future
   ) {}
 
@@ -17,8 +17,8 @@ export class AIFactory {
       case "gemini":
         return this.geminiProvider;
 
-      // case "openai":
-      //   return this.openAIProvider;
+      case "openai":
+        return this.openAIProvider;
 
       default:
         throw new Error(`Unsupported AI model: ${model}`);

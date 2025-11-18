@@ -6,7 +6,7 @@ import { GeminiProvider } from "./providers/gemini.provider";
 import { OpenAIProvider } from "./providers/openai.provider";
 
 @Module({
-  providers: [AiService, AIFactory, GeminiProvider],
+  providers: [AiService, AIFactory, GeminiProvider, OpenAIProvider],
   controllers: [AiController],
 })
 export class AiModule {}
