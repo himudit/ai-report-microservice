@@ -1,10 +1,10 @@
-import { Injectable } from '@nestjs/common';
-import { Cron } from '@nestjs/schedule';
+import { Injectable } from "@nestjs/common";
+import { Cron } from "@nestjs/schedule";
 
 @Injectable()
 export class SchedulerService {
-    @Cron('*/2 * * * *')
-    handleCron() {
-        console.log('Cron job running every 10 minutes...')
-    }
+  @Cron("*/2 * * * *")
+  handleCron() {
+    console.log("Cron job running every 10 minutes...");
+  }
 }
