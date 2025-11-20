@@ -7,7 +7,7 @@ export class AiService {
   constructor(private readonly aiFactory: AIFactory) {}
 
   async generateAIResponse(request: AIRequest) {
-    const provider = this.aiFactory.getProvider("openai");
+    const provider = this.aiFactory.getProvider("groq");
 
     return provider.generateResponse(request.getPrompt());
   }

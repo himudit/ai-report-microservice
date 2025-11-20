@@ -2,14 +2,14 @@ import { Injectable } from "@nestjs/common";
 import { AIProvider } from "../providers/ai-provider.interface";
 import { GeminiProvider } from "../providers/gemini.provider";
 import { OpenAIProvider } from "../providers/openai.provider";
-// Later you can add: import { OpenAIProvider } ...
+import { GroqAIProvider } from "../providers/groq.provider.interface";
 
 @Injectable()
 export class AIFactory {
   constructor(
     private readonly geminiProvider: GeminiProvider,
     private readonly openAIProvider: OpenAIProvider,
-    // add new providers here in future
+    private readonly groqAIProvider: GroqAIProvider,
   ) {}
 
   getProvider(model: string): AIProvider {
@@ -18,6 +18,9 @@ export class AIFactory {
         return this.geminiProvider;
 
       case "openai":
+        return this.openAIProvider;
+
+      case "groq":
         return this.openAIProvider;
 
       default:
