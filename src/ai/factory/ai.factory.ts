@@ -21,7 +21,7 @@ export class AIFactory {
         return this.openAIProvider;
 
       case "groq":
-        return this.openAIProvider;
+        return this.groqAIProvider;
 
       default:
         throw new Error(`Unsupported AI model: ${model}`);
