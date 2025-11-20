@@ -38,7 +38,7 @@ export class OpenAIProvider implements AIProvider {
 
   async generateResponse(prompt: string): Promise<string> {
     const response = await this.client.chat.completions.create({
-      model: "llama-3.1-70b-versatile", // 👈 FAST + FREE Groq model
+      model: "llama-3.3-70b-versatile", // 👈 FAST + FREE Groq model
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
     });
