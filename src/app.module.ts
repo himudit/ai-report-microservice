@@ -10,7 +10,7 @@ import { ConfigModule } from "@nestjs/config";
 @Module({
   imports: [
     UserModule,
-    SchedulerModule,
+    // SchedulerModule,
     AiModule,
     ConfigModule.forRoot({
       isGlobal: true, // Makes config available globally
